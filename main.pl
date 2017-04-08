@@ -12,7 +12,7 @@ main :-
 
 
 intro :-
-  write('Which operating system should I use?'), nl,
+  write('So you wanna try Linux? I will advice you which operating system you should use.'), nl,
   write('To answer, input the number shown next to each answer, followed by a dot (.)'), nl, nl.
 
 
