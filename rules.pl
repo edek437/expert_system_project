@@ -22,9 +22,22 @@ os(virtual_box) :-
   change_os(not_sure),
   how_to_test_new_os(virtual_box).
 
-os(to_be_implemented_next) :-
+os(linux_mint) :-
   experience(no_experience),
-  change_os(yes).
+  change_os(yes),
+  similar_to_windows(yes).
 
-os(to_be_implemented) :-
+os(ubuntu) :-
+  experience(no_experience),
+  change_os(yes),
+  similar_to_windows(no),
+  new_os_features(new_os_full_fetured).
+
+os(elementary_os) :-
+  experience(no_experience),
+  change_os(yes),
+  similar_to_windows(no),
+  new_os_features(new_os_stripped_down).
+
+os(to_be_implemented_next) :-
   experience(some_experience).

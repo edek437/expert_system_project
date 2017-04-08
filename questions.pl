@@ -11,6 +11,12 @@ question(current_os) :-
 question(how_to_test_new_os) :-
   write('How would you like to test new OS?'), nl.
 
+question(similar_to_windows) :-
+  write('Need it to look similar to Windows?'), nl.
+
+question(new_os_features) :-
+  write('How much stuff do you need?'), nl.
+
 % Answers
 answer(not_gonna_tell) :-
   write('Why do you want to know so much about me?').
@@ -42,6 +48,12 @@ answer(live_cd) :-
 answer(virtual_box) :-
   write('I want to run my test OS during my daily work').
 
+answer(new_os_full_fetured) :-
+  write('I want full set of features.').
+
+answer(new_os_stripped_down) :-
+  write('I only need basic features').
+
 % Assigns an answer to questions from the knowledge base
 
 experience(Answer) :-
@@ -67,3 +79,15 @@ how_to_test_new_os(Answer) :-
 how_to_test_new_os(Answer) :-
   \+ progress(how_to_test_new_os, _),
   ask(how_to_test_new_os, Answer, [live_cd, virtual_box]).
+
+similar_to_windows(Answer) :-
+  progress(similar_to_windows, Answer).
+similar_to_windows(Answer) :-
+  \+ progress(similar_to_windows, _),
+  ask(similar_to_windows, Answer, [yes, no]).
+
+new_os_features(Answer) :-
+  progress(new_os_features, Answer).
+new_os_features(Answer) :-
+  \+ progress(new_os_features, _),
+  ask(new_os_features, Answer, [new_os_full_fetured, new_os_stripped_down]).
