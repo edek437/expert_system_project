@@ -40,4 +40,8 @@ os(elementary_os) :-
   new_os_features(new_os_stripped_down).
 
 os(to_be_implemented_next) :-
+  experience(some_experience),
+  linux_experience(advanced).
+
+os(to_be_implemented) :-
   experience(some_experience).

@@ -17,6 +17,9 @@ question(similar_to_windows) :-
 question(new_os_features) :-
   write('How much stuff do you need?'), nl.
 
+question(linux_experience) :-
+  write('How much?'), nl.
+
 % Answers
 answer(not_gonna_tell) :-
   write('Why do you want to know so much about me?').
@@ -53,6 +56,15 @@ answer(new_os_full_fetured) :-
 
 answer(new_os_stripped_down) :-
   write('I only need basic features').
+
+answer(beginner) :-
+  write('I am beginner').
+
+answer(intermediate) :-
+  write('I am intermediate user').
+
+answer(advanced) :-
+  write('I am advanced user').
 
 % Assigns an answer to questions from the knowledge base
 
@@ -91,3 +103,9 @@ new_os_features(Answer) :-
 new_os_features(Answer) :-
   \+ progress(new_os_features, _),
   ask(new_os_features, Answer, [new_os_full_fetured, new_os_stripped_down]).
+
+linux_experience(Answer) :-
+  progress(linux_experience, Answer).
+linux_experience(Answer) :-
+  \+ progress(linux_experience, _),
+  ask(linux_experience, Answer, [beginner, intermediate, advanced]).
