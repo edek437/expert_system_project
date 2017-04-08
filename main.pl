@@ -7,17 +7,17 @@
 main :-
   intro,
   reset_answers,
-  find_language(Language),
-  describe(Language), nl.
+  find_os(Os),
+  describe(Os), nl.
 
 
 intro :-
-  write('Which programming language should I learn first?'), nl,
+  write('Which operating system should I use?'), nl,
   write('To answer, input the number shown next to each answer, followed by a dot (.)'), nl, nl.
 
 
-find_language(Language) :-
-  language(Language), !.
+find_os(Os) :-
+  os(Os), !.
 
 
 % Store user answers to be able to track his progress
