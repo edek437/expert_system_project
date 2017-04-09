@@ -198,11 +198,18 @@ os(slitaz) :-
   computer_age(old_computer),
   prefer_old_computer(secure).
 
+os(kali) :-
+  experience(some_experience),
+  linux_experience(beginner),
+  care_about_bloat(no),
+  haxor(yes).
+
 os(to_be_implemented_next) :-
   experience(some_experience),
   linux_experience(beginner),
-  care_about_bloat(no).
+  care_about_bloat(no),
+  haxor(no).
 
 os(to_be_implemented) :-
   experience(some_experience),
-  inux_experience(intermediate).
+  linux_experience(intermediate).

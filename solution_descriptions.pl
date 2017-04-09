@@ -196,6 +196,12 @@ describe(slitaz) :-
          using the Linux Kernel and GNU software.'), nl,
   write('Homepage: http://www.slitaz.org/en/').
 
+describe(kali) :-
+  write('Name: Kali Linux (former Backtrack Linux)'), nl,
+  write('Description: Debian-derived Linux distribution designed for digital \c
+         forensics and penetration testing.'), nl,
+  write('Homepage: https://www.kali.org/').
+
 describe(to_be_implemented) :-
   write('This part of expert system is not implemented yet.'), nl.
 

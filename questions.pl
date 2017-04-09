@@ -62,6 +62,9 @@ question(prefer_cur_gen) :-
 question(prefer_old_computer) :-
   write('What do you prefer?'), nl.
 
+question(haxor) :-
+  write('Are you a l337 hax0r?'), nl.
+
 % Answers
 answer(not_gonna_tell) :-
   write('Why do you want to know so much about me?').
@@ -298,3 +301,9 @@ prefer_old_computer(Answer) :-
 prefer_old_computer(Answer) :-
   \+ progress(prefer_old_computer, _),
   ask(prefer_old_computer, Answer, [fast_bootable, home_usage, secure]).
+
+haxor(Answer) :-
+  progress(haxor, Answer).
+haxor(Answer) :-
+  \+ progress(haxor, _),
+  ask(haxor, Answer, [yes, no]).
