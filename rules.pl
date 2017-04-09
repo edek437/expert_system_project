@@ -290,6 +290,12 @@ os(ubuntu_studio) :-
   oriented_details(multimedia_edition),
   audio_specific(no).
 
+os(to_be_implemented_next) :-
+  experience(some_experience),
+  linux_experience(intermediate),
+  freedom(yes).
+
 os(to_be_implemented) :-
   experience(some_experience),
-  linux_experience(intermediate).
+  linux_experience(intermediate),
+  freedom(not_necessarily).

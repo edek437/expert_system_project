@@ -83,6 +83,9 @@ question(fedora_based_games_distro) :-
 question(audio_specific) :-
   write('Audio specific distro?'), nl.
 
+question(freedom) :-
+  write('Do you care about freedom?'), nl.
+
 % Answers
 answer(not_gonna_tell) :-
   write('Why do you want to know so much about me?').
@@ -218,6 +221,9 @@ answer(multimedia_edition) :-
 
 answer(games) :-
   write('Games').
+
+answer(not_necessarily) :-
+  write('Not necessarily').
 
 % Assigns an answer to questions from the knowledge base
 
@@ -388,3 +394,9 @@ audio_specific(Answer) :-
 audio_specific(Answer) :-
   \+ progress(audio_specific, _),
   ask(audio_specific, Answer, [yes, no]).
+
+freedom(Answer) :-
+  progress(freedom, Answer).
+freedom(Answer) :-
+  \+ progress(freedom, _),
+  ask(freedom, Answer, [yes, not_necessarily]).
