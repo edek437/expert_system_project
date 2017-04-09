@@ -202,6 +202,35 @@ describe(kali) :-
          forensics and penetration testing.'), nl,
   write('Homepage: https://www.kali.org/').
 
+describe(open_suse) :-
+  write('Name: openSUSE'), nl,
+  write('Description: OpenSUSE is an open source Linux operating system distribution \c
+         developed and supported by the openSUSE Project. OpenSUSE supports both \c
+         GNOME and KDE desktop environments.'), nl,
+  write('Homepage: https://www.opensuse.org/').
+
+describe(cae_linux) :-
+  write('Name: CAELinux'), nl,
+  write('Description: Distribution that contains a unique suite of open source \c
+         simulation tools for FEA, CFD or multiphysics simulation but also a \c
+         large panel of other engineering software for CAD-CAM & 3D printing, \c
+         electronics, mathematics & programming '), nl,
+  write('Homepage: http://caelinux.com/CMS/').
+
+describe(bio_linux) :-
+  write('Name: Bio-Linux'), nl,
+  write('Description: Bio-Linux is an ideal system for scientists handling and \c
+         analysing biological data.'), nl,
+  write('Homepage: http://environmentalomics.org/bio-linux/').
+
+describe(poseidon_linux) :-
+  write('Name: Poseidon Linux'), nl,
+  write('Description: This operating system is based on Ubuntu and inspired by \c
+         Quantian Linux. It offers several specific tools in the areas of GIS, \c
+         3D Visualization, Mathematics, Statistics and several otherfields of \c
+         research.'), nl,
+  write('Homepage: http://poseidon.linuxfreedom.com/').
+
 describe(to_be_implemented) :-
   write('This part of expert system is not implemented yet.'), nl.
 

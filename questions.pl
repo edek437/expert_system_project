@@ -65,6 +65,18 @@ question(prefer_old_computer) :-
 question(haxor) :-
   write('Are you a l337 hax0r?'), nl.
 
+question(purpose) :-
+  write('General purpose or oriented distribution?'), nl.
+
+question(general_purpose_prefs) :-
+  write('Tell me more about your preferences.'), nl.
+
+question(oriented_details) :-
+  write('Oriented to what?'), nl.
+
+question(bioinformatics) :-
+  write('Bioinformatics?'), nl.
+
 % Answers
 answer(not_gonna_tell) :-
   write('Why do you want to know so much about me?').
@@ -173,6 +185,33 @@ answer(fast_bootable) :-
 
 answer(home_usage) :-
   write('OS that I can use in home').
+
+answer(general_purpose) :-
+  write('General purpose').
+
+answer(oriented) :-
+  write('Oriented').
+
+answer(customization) :-
+  write('I want wide variety of customization').
+
+answer(support) :-
+  write('I want great community support').
+
+answer(newest_apps) :-
+  write('I want recent applications availbale in my package manager').
+
+answer(scientific) :-
+  write('Scientific').
+
+answer(cad) :-
+  write('CAD').
+
+answer(multimedia_edition) :-
+  write('Multimedia edition').
+
+answer(games) :-
+  write('Games').
 
 % Assigns an answer to questions from the knowledge base
 
@@ -307,3 +346,27 @@ haxor(Answer) :-
 haxor(Answer) :-
   \+ progress(haxor, _),
   ask(haxor, Answer, [yes, no]).
+
+purpose(Answer) :-
+  progress(purpose, Answer).
+purpose(Answer) :-
+  \+ progress(purpose, _),
+  ask(purpose, Answer, [general_purpose, oriented]).
+
+general_purpose_prefs(Answer) :-
+  progress(general_purpose_prefs, Answer).
+general_purpose_prefs(Answer) :-
+  \+ progress(general_purpose_prefs, _),
+  ask(general_purpose_prefs, Answer, [support, customization, newest_apps]).
+
+oriented_details(Answer) :-
+  progress(oriented_details, Answer).
+oriented_details(Answer) :-
+  \+ progress(oriented_details, _),
+  ask(oriented_details, Answer, [scientific, cad, multimedia_edition, games]).
+
+bioinformatics(Answer) :-
+  progress(bioinformatics, Answer).
+bioinformatics(Answer) :-
+  \+ progress(bioinformatics, _),
+  ask(bioinformatics, Answer, [yes, no]).

@@ -204,11 +204,62 @@ os(kali) :-
   care_about_bloat(no),
   haxor(yes).
 
+os(fedora) :-
+  experience(some_experience),
+  linux_experience(beginner),
+  care_about_bloat(no),
+  haxor(no),
+  purpose(general_purpose),
+  general_purpose_prefs(newest_apps).
+
+os(ubuntu) :-
+  experience(some_experience),
+  linux_experience(beginner),
+  care_about_bloat(no),
+  haxor(no),
+  purpose(general_purpose),
+  general_purpose_prefs(support).
+
+os(open_suse) :-
+  experience(some_experience),
+  linux_experience(beginner),
+  care_about_bloat(no),
+  haxor(no),
+  purpose(general_purpose),
+  general_purpose_prefs(customization).
+
+os(cae_linux) :-
+  experience(some_experience),
+  linux_experience(beginner),
+  care_about_bloat(no),
+  haxor(no),
+  purpose(oriented),
+  oriented_details(cad).
+
+os(bio_linux) :-
+  experience(some_experience),
+  linux_experience(beginner),
+  care_about_bloat(no),
+  haxor(no),
+  purpose(oriented),
+  oriented_details(scientific),
+  bioinformatics(yes).
+
+os(poseidon_linux) :-
+  experience(some_experience),
+  linux_experience(beginner),
+  care_about_bloat(no),
+  haxor(no),
+  purpose(oriented),
+  oriented_details(scientific),
+  bioinformatics(no).
+
 os(to_be_implemented_next) :-
   experience(some_experience),
   linux_experience(beginner),
   care_about_bloat(no),
-  haxor(no).
+  haxor(no),
+  purpose(oriented).
 
 os(to_be_implemented) :-
   experience(some_experience),
