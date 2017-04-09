@@ -77,6 +77,12 @@ question(oriented_details) :-
 question(bioinformatics) :-
   write('Bioinformatics?'), nl.
 
+question(fedora_based_games_distro) :-
+  write('Fedora based games distro?'), nl.
+
+question(audio_specific) :-
+  write('Audio specific distro?'), nl.
+
 % Answers
 answer(not_gonna_tell) :-
   write('Why do you want to know so much about me?').
@@ -370,3 +376,15 @@ bioinformatics(Answer) :-
 bioinformatics(Answer) :-
   \+ progress(bioinformatics, _),
   ask(bioinformatics, Answer, [yes, no]).
+
+fedora_based_games_distro(Answer) :-
+  progress(fedora_based_games_distro, Answer).
+fedora_based_games_distro(Answer) :-
+  \+ progress(fedora_based_games_distro, _),
+  ask(fedora_based_games_distro, Answer, [yes, no]).
+
+audio_specific(Answer) :-
+  progress(audio_specific, Answer).
+audio_specific(Answer) :-
+  \+ progress(audio_specific, _),
+  ask(audio_specific, Answer, [yes, no]).

@@ -231,6 +231,41 @@ describe(poseidon_linux) :-
          research.'), nl,
   write('Homepage: http://poseidon.linuxfreedom.com/').
 
+describe(fedora_games_spin) :-
+  write('Name: Fedora Games spin'), nl,
+  write('Description: The Fedora Games spin offers a perfect showcase of the \c
+         best games available in Fedora. The included games span several genres, \c
+         from first-person shooters to real-time and turn-based strategy games \c
+         to puzzle games.'), nl,
+  write('Homepage: ').
+
+describe(live_linux_gamers) :-
+  write('Name: live.linux-gamers.net'), nl,
+  write('Description:  Linux live distribution: "boot \'n play". The idea is \c
+         for you to be able to carry a decent amount of high-quality Linux games \c
+         with you where ever you go for purposes of demonstration, gaming or \c
+         parties. Your computer will remain completely unchanged as everything \c
+         will run live.'), nl,
+  write('Homepage: http://live.linux-gamers.net/').
+
+describe(ubuntu_studio) :-
+  write('Name: Ubuntu Studio'), nl,
+  write('Description: Ubuntu Studio is a free and open source operative system, \c
+         and an official flavor of Ubuntu. Ubuntu Studio is the most widely used \c
+         multimedia orientated GNU/Linux distribution in the world. It comes \c
+         preinstalled with a selection of the most common free multimedia applications \c
+         available, and is configured for best performance for the Ubuntu Studio \c
+         defined workflows: Audio, Graphics, Video, Photography and Publishing.'), nl,
+  write('Homepage: https://ubuntustudio.org/').
+
+describe(av_linux) :-
+  write('Name: AV Linux'), nl,
+  write('Description: Distribution which is utilized to create a independent, \c
+         focused and specialized platform for Multimedia Content Creation using \c
+         Linux. AV Linux is essentially a collected and combined showcase of \c
+         the phenomenal work of Open-Source and Commercial Audio developers.'), nl,
+  write('Homepage: http://www.bandshed.net/avlinux/').
+
 describe(to_be_implemented) :-
   write('This part of expert system is not implemented yet.'), nl.
 

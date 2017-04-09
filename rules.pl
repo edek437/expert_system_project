@@ -254,12 +254,41 @@ os(poseidon_linux) :-
   oriented_details(scientific),
   bioinformatics(no).
 
-os(to_be_implemented_next) :-
+os(fedora_games_spin) :-
   experience(some_experience),
   linux_experience(beginner),
   care_about_bloat(no),
   haxor(no),
-  purpose(oriented).
+  purpose(oriented),
+  oriented_details(games),
+  fedora_based_games_distro(yes).
+
+os(live_linux_gamers) :-
+  experience(some_experience),
+  linux_experience(beginner),
+  care_about_bloat(no),
+  haxor(no),
+  purpose(oriented),
+  oriented_details(games),
+  fedora_based_games_distro(no).
+
+os(av_linux) :-
+  experience(some_experience),
+  linux_experience(beginner),
+  care_about_bloat(no),
+  haxor(no),
+  purpose(oriented),
+  oriented_details(multimedia_edition),
+  audio_specific(yes).
+
+os(ubuntu_studio) :-
+  experience(some_experience),
+  linux_experience(beginner),
+  care_about_bloat(no),
+  haxor(no),
+  purpose(oriented),
+  oriented_details(multimedia_edition),
+  audio_specific(no).
 
 os(to_be_implemented) :-
   experience(some_experience),
