@@ -47,6 +47,21 @@ question(xorg) :-
 question(exotic_info) :-
   write('Tell me more about your preferences.'), nl.
 
+question(care_about_bloat) :-
+  write('Do you care about care_about_bloat?'), nl.
+
+question(follow_instructions) :-
+  write('Can you follow instructions?'), nl.
+
+question(computer_age) :-
+  write('Is your computer:'), nl.
+
+question(prefer_cur_gen) :-
+  write('What do you prefer?'), nl.
+
+question(prefer_old_computer) :-
+  write('What do you prefer?'), nl.
+
 % Answers
 answer(not_gonna_tell) :-
   write('Why do you want to know so much about me?').
@@ -134,6 +149,27 @@ answer(poor_mac_fanboy) :-
 
 answer(powerfull_distro) :-
   write('I want powerfull and lightweight distro').
+
+answer(old_computer) :-
+  write('Old computer').
+
+answer(current_gen_computer) :-
+  write('Current generation computer').
+
+answer(configurable_dektop_env) :-
+  write('Easily configurable desktop environment').
+
+answer(energy_efficient_and_fast) :-
+  write('Energy efficient and fast OS').
+
+answer(secure) :-
+  write('Secure and high performant OS').
+
+answer(fast_bootable) :-
+  write('OS that boots fast from any media').
+
+answer(home_usage) :-
+  write('OS that I can use in home').
 
 % Assigns an answer to questions from the knowledge base
 
@@ -232,3 +268,33 @@ exotic_info(Answer) :-
 exotic_info(Answer) :-
   \+ progress(exotic_info, _),
   ask(exotic_info, Answer, [distributed, assemly_hardcore, poor_mac_fanboy, creator, powerfull_distro]).
+
+care_about_bloat(Answer) :-
+  progress(care_about_bloat, Answer).
+care_about_bloat(Answer) :-
+  \+ progress(care_about_bloat, _),
+  ask(care_about_bloat, Answer, [yes, no]).
+
+follow_instructions(Answer) :-
+  progress(follow_instructions, Answer).
+follow_instructions(Answer) :-
+  \+ progress(follow_instructions, _),
+  ask(follow_instructions, Answer, [yes, no]).
+
+computer_age(Answer) :-
+  progress(computer_age, Answer).
+computer_age(Answer) :-
+  \+ progress(computer_age, _),
+  ask(computer_age, Answer, [old_computer, current_gen_computer]).
+
+prefer_cur_gen(Answer) :-
+  progress(prefer_cur_gen, Answer).
+prefer_cur_gen(Answer) :-
+  \+ progress(prefer_cur_gen, _),
+  ask(prefer_cur_gen, Answer, [energy_efficient_and_fast, configurable_dektop_env]).
+
+prefer_old_computer(Answer) :-
+  progress(prefer_old_computer, Answer).
+prefer_old_computer(Answer) :-
+  \+ progress(prefer_old_computer, _),
+  ask(prefer_old_computer, Answer, [fast_bootable, home_usage, secure]).

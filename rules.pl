@@ -152,9 +152,57 @@ os(lfs) :-
   bsd_user(yes),
   exotic_info(creator).
 
+os(ubuntu_minimal) :-
+  experience(some_experience),
+  linux_experience(beginner),
+  care_about_bloat(yes),
+  follow_instructions(yes).
+
+os(xubuntu) :-
+  experience(some_experience),
+  linux_experience(beginner),
+  care_about_bloat(yes),
+  follow_instructions(no),
+  computer_age(current_gen_computer),
+  prefer_cur_gen(configurable_dektop_env).
+
+os(lubuntu) :-
+  experience(some_experience),
+  linux_experience(beginner),
+  care_about_bloat(yes),
+  follow_instructions(no),
+  computer_age(current_gen_computer),
+  prefer_cur_gen(energy_efficient_and_fast).
+
+os(puppy_linux) :-
+  experience(some_experience),
+  linux_experience(beginner),
+  care_about_bloat(yes),
+  follow_instructions(no),
+  computer_age(old_computer),
+  prefer_old_computer(home_usage).
+
+os(porteus) :-
+  experience(some_experience),
+  linux_experience(beginner),
+  care_about_bloat(yes),
+  follow_instructions(no),
+  computer_age(old_computer),
+  prefer_old_computer(fast_bootable).
+
+os(slitaz) :-
+  experience(some_experience),
+  linux_experience(beginner),
+  care_about_bloat(yes),
+  follow_instructions(no),
+  computer_age(old_computer),
+  prefer_old_computer(secure).
+
 os(to_be_implemented_next) :-
   experience(some_experience),
-  linux_experience(beginner).
+  linux_experience(beginner),
+  care_about_bloat(no).
 
 os(to_be_implemented) :-
-  experience(some_experience).
+  experience(some_experience),
+  inux_experience(intermediate).

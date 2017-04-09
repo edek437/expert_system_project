@@ -154,6 +154,48 @@ describe(lfs) :-
          system entirely from source.'), nl,
   write('Homepage: http://www.linuxfromscratch.org/lfs/').
 
+describe(ubuntu_minimal) :-
+  write('Name: Ubuntu Minimal'), nl,
+  write('Description: The Minimal CD will download packages from online archives \c
+         at installation time instead of providing them on the install CD itself. \c
+         It provides only the packages needed for installation.'), nl,
+  write('Homepage: https://www.ubuntu.com/').
+
+describe(xubuntu) :-
+  write('Name: Xubuntu'), nl,
+  write('Description: Xubuntu is an elegant and easy to use operating system. \c
+         It comes with Xfce, which is a stable, light and configurable desktop \c
+         environment. Xubuntu is perfect for those who want the most out of their \c
+         desktops, laptops and netbooks with a modern look and enough features for \c
+         efficient, daily usage. It works well on older hardware too.'), nl,
+  write('Homepage: https://xubuntu.org/').
+
+describe(lubuntu) :-
+  write('Name: Lubuntu'), nl,
+  write('Description: Lubuntu is a fast and lightweight operating system. The \c
+         core of the system is based on Linux and Ubuntu. Lubuntu uses the minimal \c
+         desktop LXDE, and a selection of light applications.'), nl,
+  write('Homepage: http://lubuntu.net/').
+
+describe(puppy_linux) :-
+  write('Name: Puppy Linux'), nl,
+  write('Description: Puppy Linux is a unique family of Linux distributions \c
+         meant for the home-user computers.'), nl,
+  write('Homepage: http://puppylinux.com/').
+
+describe(porteus) :-
+  write('Name: Porteus'), nl,
+  write('Description: Porteus is a complete linux operating system that is \c
+         optimized to run from CD, USB flash drive, hard drive, or other bootable \c
+         storage media.'), nl,
+  write('Homepage: http://www.porteus.org/').
+
+describe(slitaz) :-
+  write('Name: SliTaz'), nl,
+  write('Description: SliTaz is a secure and high performance operating system \c
+         using the Linux Kernel and GNU software.'), nl,
+  write('Homepage: http://www.slitaz.org/en/').
+
 describe(to_be_implemented) :-
   write('This part of expert system is not implemented yet.'), nl.
 
@@ -161,4 +203,6 @@ describe(to_be_implemented_next) :-
   write('This part of expert system is gonna be implemeted in next step.'), nl.
 
 dummy_description() :-
+  write('Description: '), nl,
+  write('Homepage: '), nl,
   write('Dummy descrption. In futute there will be short descrption and link to OS page'), nl.
