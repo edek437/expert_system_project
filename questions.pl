@@ -44,6 +44,9 @@ question(which_gui) :-
 question(xorg) :-
   write('What about X.Org?'), nl.
 
+question(exotic_info) :-
+  write('Tell me more about your preferences.'), nl.
+
 % Answers
 answer(not_gonna_tell) :-
   write('Why do you want to know so much about me?').
@@ -117,6 +120,20 @@ answer(xorg_available) :-
 answer(xorg_included) :-
   write('X.Org included').
 
+answer(distributed) :-
+  write('I want distributed OS').
+
+answer(assemly_hardcore) :-
+  write('I want OS written in assembly language').
+
+answer(creator) :-
+  write('I wanna create my own linux distro').
+
+answer(poor_mac_fanboy) :-
+  write('I want mac but I can\'t afford Apple\'s prices').
+
+answer(powerfull_distro) :-
+  write('I want powerfull and lightweight distro').
 
 % Assigns an answer to questions from the knowledge base
 
@@ -209,3 +226,9 @@ xorg(Answer) :-
 xorg(Answer) :-
   \+ progress(xorg, _),
   ask(xorg, Answer, [xorg_available, xorg_included]).
+
+exotic_info(Answer) :-
+  progress(exotic_info, Answer).
+exotic_info(Answer) :-
+  \+ progress(exotic_info, _),
+  ask(exotic_info, Answer, [distributed, assemly_hardcore, poor_mac_fanboy, creator, powerfull_distro]).

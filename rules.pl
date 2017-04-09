@@ -117,11 +117,44 @@ os(open_bsd) :-
   gui(no),
   xorg(xorg_included).
 
-os(to_be_implemented_next) :-
+os(react_os) :-
   experience(some_experience),
   linux_experience(advanced),
   something_that_works(no),
-  bsd_user(yes).
+  bsd_user(yes),
+  exotic_info(powerfull_distro).
+
+os(plan_9) :-
+  experience(some_experience),
+  linux_experience(advanced),
+  something_that_works(no),
+  bsd_user(yes),
+  exotic_info(disturbed).
+
+os(menuet_os) :-
+  experience(some_experience),
+  linux_experience(advanced),
+  something_that_works(no),
+  bsd_user(yes),
+  exotic_info(assemly_hardcore).
+
+os(hackintosh) :-
+  experience(some_experience),
+  linux_experience(advanced),
+  something_that_works(no),
+  bsd_user(yes),
+  exotic_info(poor_mac_fanboy).
+
+os(lfs) :-
+  experience(some_experience),
+  linux_experience(advanced),
+  something_that_works(no),
+  bsd_user(yes),
+  exotic_info(creator).
+
+os(to_be_implemented_next) :-
+  experience(some_experience),
+  linux_experience(beginner).
 
 os(to_be_implemented) :-
   experience(some_experience).

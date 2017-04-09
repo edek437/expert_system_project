@@ -118,6 +118,42 @@ describe(open_bsd) :-
          standardization, and portability.'), nl,
   write('Homepage: https://www.openbsd.org/').
 
+describe(plan9) :-
+  write('Name: Plan 9'), nl,
+  write('Description: Plan 9 from Bell Labs is a distributed operating system. \c
+         It takes some of the principles of Unix, developed in the same research \c
+         group, but extends these to a networked environment with graphical terminals.'), nl,
+  write('Homepage: http://plan9.bell-labs.com/plan9/').
+
+describe(react_os) :-
+  write('Name: ReactOS'), nl,
+  write('Description: ReactOS is a free and open-sourced operating system based \c
+         on the Windows NT architecture, providing support for existing applications \c
+         and drivers, and an alternative to the current dominant consumer operating \c
+         system.'), nl,
+  write('Homepage: https://www.reactos.org/').
+
+describe(menuet_os) :-
+  write('Name: MenuetOs'), nl,
+  write('Description: MenuetOS is a pre-emptive, real-time and multiprocessor \c
+         Operating System in development for the PC written entirely in 32/64 bit \c
+         assembly language.'), nl,
+  write('Homepage: http://menuetos.net/').
+
+describe(hackintosh) :-
+  write('Name: Hakintosh'), nl,
+  write('Description: Collaborative hacking project to run the OS X operating \c
+         system on non-Apple personal computers with x86 architecture on x86-64 \c
+         processors.'), nl,
+  write('Homepage: http://www.hackintosh.com/').
+
+describe(lfs) :-
+  write('Name: LFS (Linux From Scratch)'), nl,
+  write('Description: Linux From Scratch (LFS) is a project that provides you \c
+         with step-by-step instructions for building your own customized Linux \c
+         system entirely from source.'), nl,
+  write('Homepage: http://www.linuxfromscratch.org/lfs/').
+
 describe(to_be_implemented) :-
   write('This part of expert system is not implemented yet.'), nl.
 
