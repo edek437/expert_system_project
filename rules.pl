@@ -51,12 +51,41 @@ os(fedora) :-
   something_that_works(yes),
   lts(no).
 
-os(to_be_implemented_next) :-
+os(rhel) :-
   experience(some_experience),
   linux_experience(advanced),
-  something_that_works(sort_of).
+  something_that_works(sort_of),
+  paid(yes).
 
-os(to_be_implemented) :-
+os(debian) :-
+  experience(some_experience),
+  linux_experience(advanced),
+  something_that_works(sort_of),
+  paid(no),
+  free_advanced(desktop).
+
+os(cent_os) :-
+  experience(some_experience),
+  linux_experience(advanced),
+  something_that_works(sort_of),
+  paid(no),
+  free_advanced(server).
+
+os(solaris) :-
+  experience(some_experience),
+  linux_experience(advanced),
+  something_that_works(sort_of),
+  paid(no),
+  free_advanced(oracle_fanboy).
+
+os(open_indiana) :-
+  experience(some_experience),
+  linux_experience(advanced),
+  something_that_works(sort_of),
+  paid(no),
+  free_advanced(oracle_hater).
+
+os(to_be_implemented_next) :-
   experience(some_experience),
   linux_experience(advanced),
   something_that_works(no).

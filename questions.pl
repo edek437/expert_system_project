@@ -26,6 +26,12 @@ question(something_that_works) :-
 question(lts) :-
   write('Do you know OS with Long Term Supprt Releases?'), nl.
 
+question(paid) :-
+  write('Do you want commercial OS?'), nl.
+
+question(free_advanced) :-
+  write('Tell me more about your preferences.'), nl.
+
 % Answers
 answer(not_gonna_tell) :-
   write('Why do you want to know so much about me?').
@@ -74,6 +80,19 @@ answer(advanced) :-
 
 answer(sort_of) :-
   write('Sort of').
+
+answer(oracle_fanboy) :-
+  write('I have good experience with Oracle products').
+
+answer(oracle_hater) :-
+  write('I will take anything but Oracle product').
+
+answer(desktop) :-
+  write('I will use the OS as desktop workstaion').
+
+answer(server) :-
+  write('I will use OS as server').
+
 
 % Assigns an answer to questions from the knowledge base
 
@@ -130,3 +149,15 @@ lts(Answer) :-
 lts(Answer) :-
   \+ progress(lts, _),
   ask(lts, Answer, [yes, no]).
+
+paid(Answer) :-
+  progress(paid, Answer).
+paid(Answer) :-
+  \+ progress(paid, _),
+  ask(paid, Answer, [yes, no]).
+
+free_advanced(Answer) :-
+  progress(free_advanced, Answer).
+free_advanced(Answer) :-
+  \+ progress(free_advanced, _),
+  ask(free_advanced, Answer, [oracle_fanboy, oracle_hater, desktop, server]).
