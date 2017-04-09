@@ -39,9 +39,27 @@ os(elementary_os) :-
   similar_to_windows(no),
   new_os_features(new_os_stripped_down).
 
+os(ubuntu) :-
+  experience(some_experience),
+  linux_experience(advanced),
+  something_that_works(yes),
+  lts(yes).
+
+os(fedora) :-
+  experience(some_experience),
+  linux_experience(advanced),
+  something_that_works(yes),
+  lts(no).
+
 os(to_be_implemented_next) :-
   experience(some_experience),
-  linux_experience(advanced).
+  linux_experience(advanced),
+  something_that_works(sort_of).
+
+os(to_be_implemented) :-
+  experience(some_experience),
+  linux_experience(advanced),
+  something_that_works(no).
 
 os(to_be_implemented) :-
   experience(some_experience).

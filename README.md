@@ -1,5 +1,5 @@
 # expert-systems
-TBD Description on infographic
+TBD Description on infographic OSGuid2
 
 
 ## Instalation

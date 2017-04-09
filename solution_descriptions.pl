@@ -51,6 +51,48 @@ describe(elementary_os) :-
          on desktop beauty and ease of use, it’s a well known distribution'), nl,
   write('Homepage: https://elementary.io/en/').
 
+describe(fedora) :-
+  write('Name: Fedora'), nl,
+  write('Description: Fedora is a reliable, user-friendly, and powerful operating \c
+         system for your laptop or desktop computer. It supports a wide range \c
+         of developers, from hobbyists and students to professionals in corporate \c
+         environments.'), nl,
+  write('Homepage: https://getfedora.org/en/').
+
+describe(debian) :-
+  write('Name: Debian'), nl,
+  write('Description: Unix-like computer operating system that is composed entirely \c
+         of free software. It\'s stable release branch is one of the most popular \c
+         for personal computers and network servers, and has been used as a base \c
+         for many other distributions.'), nl,
+  write('Homepage: https://www.debian.org/').
+
+describe(cent_os) :-
+  write('Name: CentOS'), nl,
+  write('Descrption: Linux distribution that attempts to provide a free, enterprise-class, \c
+         community-supported computing platform functionally compatible with its \c
+         upstream source, Red Hat Enterprise Linux (RHEL).'), nl,
+  write('Homepage: https://www.centos.org/').
+
+describe(rhel) :-
+  write('Name: RHEL (RedHat Enterprise Linux)'), nl,
+  write('Descrption: Linux distribution developed by Red Hat and targeted toward \c
+         the commercial market.'), nl,
+  write('Homepage: https://www.redhat.com/en').
+
+describe(solaris) :-
+  write('Name: Oracle Solaris'), nl,
+  write('Descrption: Unix operating system originally developed by Sun Microsystems. \c
+         Solaris is known for its scalability, especially on SPARC systems, and \c
+         for originating many innovative features such as DTrace, ZFS and Time Slider.'), nl,
+  write('Homepage: https://www.oracle.com/solaris').
+
+describe(open_indiana) :-
+  write('Name: OpenIndiana'), nl,
+  write('Descrption: Free and open-source, Unix operating system derived from \c
+         OpenSolaris and based on Illumos.'), nl,
+  write('Homepage: https://www.openindiana.org/').
+
 describe(to_be_implemented) :-
   write('This part of expert system is not implemented yet.'), nl.
 

@@ -20,6 +20,12 @@ question(new_os_features) :-
 question(linux_experience) :-
   write('How much?'), nl.
 
+question(something_that_works) :-
+  write('Do you want to try something that just works?'), nl.
+
+question(lts) :-
+  write('Do you know OS with Long Term Supprt Releases?'), nl.
+
 % Answers
 answer(not_gonna_tell) :-
   write('Why do you want to know so much about me?').
@@ -66,6 +72,9 @@ answer(intermediate) :-
 answer(advanced) :-
   write('I am advanced user').
 
+answer(sort_of) :-
+  write('Sort of').
+
 % Assigns an answer to questions from the knowledge base
 
 experience(Answer) :-
@@ -109,3 +118,15 @@ linux_experience(Answer) :-
 linux_experience(Answer) :-
   \+ progress(linux_experience, _),
   ask(linux_experience, Answer, [beginner, intermediate, advanced]).
+
+something_that_works(Answer) :-
+  progress(something_that_works, Answer).
+something_that_works(Answer) :-
+  \+ progress(something_that_works, _),
+  ask(something_that_works, Answer, [yes, no, sort_of]).
+
+lts(Answer) :-
+  progress(lts, Answer).
+lts(Answer) :-
+  \+ progress(lts, _),
+  ask(lts, Answer, [yes, no]).

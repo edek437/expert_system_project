@@ -32,6 +32,8 @@ reset_answers :-
   fail.
 reset_answers.
 
+% MOVE TO QUESTION_UTILS.pl
+
 % Outputs a nicely formatted list of answers
 % [First|Rest] is the Choices list, Index is the index of First in Choices
 answers([], _).
