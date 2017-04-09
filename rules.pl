@@ -85,10 +85,43 @@ os(open_indiana) :-
   paid(no),
   free_advanced(oracle_hater).
 
+os(pc_bsd) :-
+  experience(some_experience),
+  linux_experience(advanced),
+  something_that_works(no),
+  bsd_user(no),
+  gui(yes),
+  which_gui(kde).
+
+os(ghost_bsd) :-
+  experience(some_experience),
+  linux_experience(advanced),
+  something_that_works(no),
+  bsd_user(no),
+  gui(yes),
+  which_gui(gnome).
+
+os(free_bsd) :-
+  experience(some_experience),
+  linux_experience(advanced),
+  something_that_works(no),
+  bsd_user(no),
+  gui(no),
+  xorg(xorg_available).
+
+os(open_bsd) :-
+  experience(some_experience),
+  linux_experience(advanced),
+  something_that_works(no),
+  bsd_user(no),
+  gui(no),
+  xorg(xorg_included).
+
 os(to_be_implemented_next) :-
   experience(some_experience),
   linux_experience(advanced),
-  something_that_works(no).
+  something_that_works(no),
+  bsd_user(yes).
 
 os(to_be_implemented) :-
   experience(some_experience).

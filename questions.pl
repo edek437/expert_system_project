@@ -32,6 +32,18 @@ question(paid) :-
 question(free_advanced) :-
   write('Tell me more about your preferences.'), nl.
 
+question(bsd_user) :-
+  write('Arleady used *BSD?'), nl.
+
+question(gui) :-
+  write('GUI by default?'), nl.
+
+question(which_gui) :-
+  write('Which GUI do you prefer?'), nl.
+
+question(xorg) :-
+  write('What about X.Org?'), nl.
+
 % Answers
 answer(not_gonna_tell) :-
   write('Why do you want to know so much about me?').
@@ -92,6 +104,18 @@ answer(desktop) :-
 
 answer(server) :-
   write('I will use OS as server').
+
+answer(kde) :-
+  write('KDE').
+
+answer(gnome) :-
+  write('GNOME').
+
+answer(xorg_available) :-
+  write('X.Org available').
+
+answer(xorg_included) :-
+  write('X.Org included').
 
 
 % Assigns an answer to questions from the knowledge base
@@ -161,3 +185,27 @@ free_advanced(Answer) :-
 free_advanced(Answer) :-
   \+ progress(free_advanced, _),
   ask(free_advanced, Answer, [oracle_fanboy, oracle_hater, desktop, server]).
+
+bsd_user(Answer) :-
+  progress(bsd_user, Answer).
+bsd_user(Answer) :-
+  \+ progress(bsd_user, _),
+  ask(bsd_user, Answer, [yes, no]).
+
+gui(Answer) :-
+  progress(gui, Answer).
+gui(Answer) :-
+  \+ progress(gui, _),
+  ask(gui, Answer, [yes, no]).
+
+which_gui(Answer) :-
+  progress(which_gui, Answer).
+which_gui(Answer) :-
+  \+ progress(which_gui, _),
+  ask(which_gui, Answer, [kde, gnome]).
+
+xorg(Answer) :-
+  progress(xorg, Answer).
+xorg(Answer) :-
+  \+ progress(xorg, _),
+  ask(xorg, Answer, [xorg_available, xorg_included]).

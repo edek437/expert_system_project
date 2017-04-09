@@ -69,29 +69,54 @@ describe(debian) :-
 
 describe(cent_os) :-
   write('Name: CentOS'), nl,
-  write('Descrption: Linux distribution that attempts to provide a free, enterprise-class, \c
+  write('Description: Linux distribution that attempts to provide a free, enterprise-class, \c
          community-supported computing platform functionally compatible with its \c
          upstream source, Red Hat Enterprise Linux (RHEL).'), nl,
   write('Homepage: https://www.centos.org/').
 
 describe(rhel) :-
   write('Name: RHEL (RedHat Enterprise Linux)'), nl,
-  write('Descrption: Linux distribution developed by Red Hat and targeted toward \c
+  write('Description: Linux distribution developed by Red Hat and targeted toward \c
          the commercial market.'), nl,
   write('Homepage: https://www.redhat.com/en').
 
 describe(solaris) :-
   write('Name: Oracle Solaris'), nl,
-  write('Descrption: Unix operating system originally developed by Sun Microsystems. \c
+  write('Description: Unix operating system originally developed by Sun Microsystems. \c
          Solaris is known for its scalability, especially on SPARC systems, and \c
          for originating many innovative features such as DTrace, ZFS and Time Slider.'), nl,
   write('Homepage: https://www.oracle.com/solaris').
 
 describe(open_indiana) :-
   write('Name: OpenIndiana'), nl,
-  write('Descrption: Free and open-source, Unix operating system derived from \c
+  write('Description: Free and open-source, Unix operating system derived from \c
          OpenSolaris and based on Illumos.'), nl,
   write('Homepage: https://www.openindiana.org/').
+
+describe(pc_bsd) :-
+  write('Name: PC-BSD'), nl,
+  write('Description: User friendly desktop or server operating system based on FreeBSD.'), nl,
+  write('Homepage: http://pcbsd.org/').
+
+describe(ghost_bsd) :-
+  write('Name: GhostBSD'), nl,
+  write('Description: GhostBSD is based on the legendary security and stability \c
+         of FreeBSD, which incidentally provides an excellent base for a desktop \c
+         operating system.'), nl,
+  write('Homepage: http://www.ghostbsd.org/').
+
+describe(free_bsd) :-
+  write('Name: FreeBSD'), nl,
+  write('Description: FreeBSD is an operating system for a variety of platforms \c
+         which focuses on features, speed, and stability.'), nl,
+  write('Homepage: https://www.freebsd.org/').
+
+describe(open_bsd) :-
+  write('Name: OpenBSD'), nl,
+  write('Description: The OpenBSD project produces a freely available, multi-platform \c
+         4.4BSD-based UNIX-like operating system. It emphasis on correctness, security, \c
+         standardization, and portability.'), nl,
+  write('Homepage: https://www.openbsd.org/').
 
 describe(to_be_implemented) :-
   write('This part of expert system is not implemented yet.'), nl.
