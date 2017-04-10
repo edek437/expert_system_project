@@ -116,6 +116,15 @@ question(packages) :-
 question(minimalist_gui) :-
   write('Pick one:'), nl.
 
+question(ease_of_setup) :-
+  write('Ease of setup?'), nl.
+
+question(easy_setup_details) :-
+  write('Pick one:'), nl.
+
+question(fast_vs_stable) :-
+  write('Bleeding edge or stability?'), nl.
+
 % Answers
 answer(not_gonna_tell) :-
   write('Why do you want to know so much about me?').
@@ -287,6 +296,24 @@ answer(personal_computing) :-
 
 answer(highly_modular) :-
   write('Highly modular').
+
+answer(more) :-
+  write('More').
+
+answer(less) :-
+  write('Less').
+
+answer(easy_administration) :-
+  write('Easy administration').
+
+answer(wide_support) :-
+  write('Wide support').
+
+answer(bleeding_edge) :-
+  write('Bleeding edge').
+
+answer(stability) :-
+  write('Stability').
 
 % Assigns an answer to questions from the knowledge base
 
@@ -523,3 +550,21 @@ minimalist_gui(Answer) :-
 minimalist_gui(Answer) :-
   \+ progress(minimalist_gui, _),
   ask(minimalist_gui, Answer, [personal_computing, highly_modular]).
+
+ease_of_setup(Answer) :-
+  progress(ease_of_setup, Answer).
+ease_of_setup(Answer) :-
+  \+ progress(ease_of_setup, _),
+  ask(ease_of_setup, Answer, [more, less]).
+
+easy_setup_details(Answer) :-
+  progress(easy_setup_details, Answer).
+easy_setup_details(Answer) :-
+  \+ progress(easy_setup_details, _),
+  ask(easy_setup_details, Answer, [easy_administration, wide_support]).
+
+fast_vs_stable(Answer) :-
+  progress(fast_vs_stable, Answer).
+fast_vs_stable(Answer) :-
+  \+ progress(fast_vs_stable, _),
+  ask(fast_vs_stable, Answer, [bleeding_edge, stability]).

@@ -417,9 +417,38 @@ os(haiku) :-
   gui(yes),
   minimalist_gui(personal_computing).
 
+os(ubuntu) :-
+  experience(some_experience),
+  linux_experience(intermediate),
+  freedom(not_necessarily),
+  compile_packages(no),
+  minimalism(dont_care),
+  ease_of_setup(more),
+  easy_setup_details(wide_support).
+
+os(open_suse) :-
+  experience(some_experience),
+  linux_experience(intermediate),
+  freedom(not_necessarily),
+  compile_packages(no),
+  minimalism(dont_care),
+  ease_of_setup(more),
+  easy_setup_details(easy_administration).
+
+os(to_be_implemented_next) :-
+  experience(some_experience),
+  linux_experience(intermediate),
+  freedom(not_necessarily),
+  compile_packages(no),
+  minimalism(dont_care),
+  ease_of_setup(less),
+  fast_vs_stable(stability).
+
 os(to_be_implemented) :-
   experience(some_experience),
   linux_experience(intermediate),
   freedom(not_necessarily),
   compile_packages(no),
-  minimalism(dont_care).
+  minimalism(dont_care),
+  ease_of_setup(less),
+  fast_vs_stable(bleeding_edge).
