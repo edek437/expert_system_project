@@ -345,13 +345,58 @@ describe(haiku) :-
          for computer users of all levels.'), nl,
   write('Homepage: https://www.haiku-os.org/').
 
+describe(frugalware) :-
+  write('Name: Frugalware'), nl,
+  write('Description: General-purpose Linux distribution designed for intermediate \c
+         users who are familiar with command-line operations. Early versions were \c
+         based on Slackware, but it is now an independently developed distribution. \c
+         Frugalware uses the Pacman package management system from Arch Linux.'), nl,
+  write('Homepage: http://frugalware.org/').
+
+describe(open_suse_tumbleweed) :-
+  write('Name: OpenSUSE Tumblewee'), nl,
+  write('Description: The Tumbleweed distribution is a pure rolling release \c
+         version of openSUSE containing the latest stable versions of all software \c
+         instead of relying on rigid periodic release cycles. The project does \c
+         this for users that want the newest stable software.'), nl,
+  write('Homepage: https://en.opensuse.org/Portal:Tumbleweed').
+
+describe(fedora_rawhide) :-
+  write('Name: Fedora Rawhide'), nl,
+  write('Description: Rawhide is the name given to the current development version \c
+         of Fedora. It consists of a package repository called "rawhide" and contains \c
+         the latest build of all Fedora packages updated on a daily basis. Each day, \c
+         an attempt is made to create a full set of \'deliverables\' (installation images \c
+         and so on), and all that compose successfully are included in the Rawhide \c
+         tree for that day.'), nl,
+  write('Homepage: https://fedoraproject.org/wiki/Releases/Rawhide').
+
+describe(sabayon) :-
+  write('Name: Sabayon'), nl,
+  write('Description: Gentoo-based open-source Linux distribution. It aims to deliver \c
+         the best "out of the box" user experience by providing the latest open source \c
+         technologies in an elegant format. In Sabayon everything should just work. It \c
+         offers a bleeding edge operating system that is both stable and reliable.'), nl,
+  write('Homepage: https://www.sabayon.org/').
+
+describe(archbang) :-
+  write('Name: Archbang'), nl,
+  write('Description: Simple lightweight rolling release Linux distribution based \c
+         on a minimal Arch Linux operating system with the Openbox window manager. \c
+         ArchBang is especially suitable for high performance on old or low-end \c
+         hardware with limited resources.'), nl,
+  write('Homepage: http://wiki.archbang.org/').
+
+describe(chakra) :-
+  write('Name: Chakra'), nl,
+  write('Description: A community developed GNU/Linux distribution with an emphasis \c
+         on KDE and Qt technologies, utilizing a unique half-rolling release model \c
+         that allows users to enjoy the latest versions of the Plasma desktop and \c
+         their favorite applications on top of a periodically updated system core.'), nl,
+  write('Homepage: https://chakralinux.org/').
+
 describe(to_be_implemented) :-
   write('This part of expert system is not implemented yet.'), nl.
 
 describe(to_be_implemented_next) :-
   write('This part of expert system is gonna be implemeted in next step.'), nl.
-
-dummy_description() :-
-  write('Description: '), nl,
-  write('Homepage: '), nl,
-  write('Dummy descrption. In futute there will be short descrption and link to OS page'), nl.
