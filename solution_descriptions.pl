@@ -287,11 +287,30 @@ describe(trisquel) :-
          kernel, with the non-free code (binary blobs) removed.'), nl,
   write('Homepage: https://trisquel.info/').
 
-describe(parabola) :-
-  write('Name: Parabola'), nl,
-  write('Description: The Parabola project is a community driven effort to provide \c
-         a fully Free (as in freedom) operating system that is simple and lightweight.'), nl,
-  write('Homepage: https://www.parabola.nu/').
+describe(slackware) :-
+  write('Name: Slackware'), nl,
+  write('Description: Slackware aims for design stability and simplicity and to \c
+         be the most "Unix-like" Linux distribution. In contrast to most modern \c
+         Linux distributions, Slackware provides no graphical installation \c
+         procedure and no automatic dependency resolution of software packages.'), nl,
+  write('Homepage: http://www.slackware.com/').
+
+describe(gentoo) :-
+  write('Name: Gentoo'), nl,
+  write('Description: Linux distribution built using the Portage package management \c
+         system. Gentoo package management is designed to be modular, portable, \c
+         easy to maintain, and flexible. Gentoo describes itself as a meta-distribution \c
+         because of its adaptability, in that the majority of users have configurations \c
+         and sets of installed programs which are unique to themselves.'), nl,
+  write('Homepage: https://www.gentoo.org/').
+
+describe(funtoo) :-
+  write('Name: Funtoo'), nl,
+  write('Description:  Linux-based operating system that is a variant of Gentoo Linux. \c
+         Funtoo Linux is a meta-distribution that builds packages automatically from \c
+         source code. Installation images are optimized for the best possible performance \c
+         on the latest Intel and AMD hardware.'), nl,
+  write('Homepage: http://www.funtoo.org/').
 
 describe(to_be_implemented) :-
   write('This part of expert system is not implemented yet.'), nl.

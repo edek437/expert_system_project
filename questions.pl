@@ -96,7 +96,13 @@ question(non_gnu_approved_details) :-
   write('Pick one:'), nl.
 
 question(compile_packages) :-
-  write('Do you want to xompile packages from source?'), nl.
+  write('Do you want to compile packages from source?'), nl.
+
+question(like_package_managers) :-
+  write('Do you like package managers?'), nl.
+
+question(package_managers_details) :-
+  write('Which one do you value the most?'), nl.
 
 % Answers
 answer(not_gonna_tell) :-
@@ -252,6 +258,8 @@ answer(from_scratch) :-
 answer(stable) :-
   write('Real stable OS').
 
+answer(optimized) :-
+  write('OS optimized for Intel and AMD hardware').
 
 
 % Assigns an answer to questions from the knowledge base
@@ -453,3 +461,15 @@ compile_packages(Answer) :-
 compile_packages(Answer) :-
   \+ progress(compile_packages, _),
   ask(compile_packages, Answer, [yes, no]).
+
+like_package_managers(Answer) :-
+  progress(like_package_managers, Answer).
+like_package_managers(Answer) :-
+  \+ progress(like_package_managers, _),
+  ask(like_package_managers, Answer, [yes, no]).
+
+package_managers_details(Answer) :-
+  progress(package_managers_details, Answer).
+package_managers_details(Answer) :-
+  \+ progress(package_managers_details, _),
+  ask(package_managers_details, Answer, [stable, customization, optimized]).

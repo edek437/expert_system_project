@@ -339,13 +339,38 @@ os(fedora) :-
   gnu_approved(no),
   non_gnu_approved_details(newest_apps).
 
-os(to_be_implemented_next) :-
+os(slackware) :-
   experience(some_experience),
   linux_experience(intermediate),
   freedom(not_necessarily),
-  compile_packages(yes).
+  compile_packages(yes),
+  like_package_managers(no).
 
-os(to_be_implemented) :-
+os(gentoo) :-
+  experience(some_experience),
+  linux_experience(intermediate),
+  freedom(not_necessarily),
+  compile_packages(yes),
+  like_package_managers(yes),
+  package_managers_details(customization).
+
+os(funtoo) :-
+  experience(some_experience),
+  linux_experience(intermediate),
+  freedom(not_necessarily),
+  compile_packages(yes),
+  like_package_managers(yes),
+  package_managers_details(optimized).
+
+os(free_bsd) :-
+  experience(some_experience),
+  linux_experience(intermediate),
+  freedom(not_necessarily),
+  compile_packages(yes),
+  like_package_managers(yes),
+  package_managers_details(stable).
+
+os(to_be_implemented_next) :-
   experience(some_experience),
   linux_experience(intermediate),
   freedom(not_necessarily),
