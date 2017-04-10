@@ -312,6 +312,39 @@ describe(funtoo) :-
          on the latest Intel and AMD hardware.'), nl,
   write('Homepage: http://www.funtoo.org/').
 
+describe(archlinux) :-
+  write('Name: Archlinux'), nl,
+  write('Description: Independently developed, x86-64 general-purpose GNU/Linux \c
+         distribution that strives to provide the latest stable versions of most \c
+         software by following a rolling-release model. The default installation \c
+         is a minimal base system, configured by the user to only add what is \c
+         purposely required.'), nl,
+  write('Homepage: https://www.archlinux.org/').
+
+describe(debian_netinst) :-
+  write('Name: Debian Netinst'), nl,
+  write('Description: A network install or netinst CD is a single CD which enables \c
+         you to install the entire operating system. This single CD contains just \c
+         the minimal amount of software to start the installation and fetch the \c
+         remaining packages over the Internet.'), nl,
+  write('Homepage: https://www.debian.org/CD/netinst/').
+
+describe(tiny_core) :-
+  write('Name: Tiny Core'), nl,
+  write('Description: Minimal Linux operating system focusing on providing a base \c
+         system using BusyBox and FLTK. The distribution is notable for its small \c
+         size (11 to 16 MB) and minimalism; additional functions are provided by \c
+         extensions. Tiny Core Linux is free and open source software and is licensed \c
+         under the GNU General Public License version 2.'), nl,
+  write('Homepage: http://tinycorelinux.net/').
+
+describe(haiku) :-
+  write('Name: Haiku'), nl,
+  write('Description: Specifically targeting personal computing, Haiku is a fast, \c
+         efficient, simple to use, easy to learn, and yet very powerful system \c
+         for computer users of all levels.'), nl,
+  write('Homepage: https://www.haiku-os.org/').
+
 describe(to_be_implemented) :-
   write('This part of expert system is not implemented yet.'), nl.
 

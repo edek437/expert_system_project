@@ -370,21 +370,52 @@ os(free_bsd) :-
   like_package_managers(yes),
   package_managers_details(stable).
 
-os(to_be_implemented_next) :-
+os(archlinux) :-
   experience(some_experience),
   linux_experience(intermediate),
   freedom(not_necessarily),
   compile_packages(no),
   minimalism(yes),
-  bleeding_edge(yes).
+  bleeding_edge(yes),
+  packages(latest_packages).
 
-os(to_be_implemented_next) :-
+os(debian_netinst) :-
   experience(some_experience),
   linux_experience(intermediate),
   freedom(not_necessarily),
   compile_packages(no),
   minimalism(yes),
-  bleeding_edge(no).
+  bleeding_edge(yes),
+  packages(tested_packages).
+
+os(debian_netinst) :-
+  experience(some_experience),
+  linux_experience(intermediate),
+  freedom(not_necessarily),
+  compile_packages(no),
+  minimalism(yes),
+  bleeding_edge(no),
+  gui(no).
+
+os(tiny_core) :-
+  experience(some_experience),
+  linux_experience(intermediate),
+  freedom(not_necessarily),
+  compile_packages(no),
+  minimalism(yes),
+  bleeding_edge(no),
+  gui(yes),
+  minimalist_gui(highly_modular).
+
+os(haiku) :-
+  experience(some_experience),
+  linux_experience(intermediate),
+  freedom(not_necessarily),
+  compile_packages(no),
+  minimalism(yes),
+  bleeding_edge(no),
+  gui(yes),
+  minimalist_gui(personal_computing).
 
 os(to_be_implemented) :-
   experience(some_experience),

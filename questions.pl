@@ -110,6 +110,12 @@ question(minimalism) :-
 question(bleeding_edge) :-
   write('Do you need to be bleeding edge?'), nl.
 
+question(packages) :-
+  write('What about packages?'), nl.
+
+question(minimalist_gui) :-
+  write('Pick one:'), nl.
+
 % Answers
 answer(not_gonna_tell) :-
   write('Why do you want to know so much about me?').
@@ -270,6 +276,17 @@ answer(optimized) :-
 answer(dont_care) :-
   write('I don\'t care').
 
+answer(latest_packages) :-
+  write('I want the absolute latest packages').
+
+answer(tested_packages) :-
+  write('I prefer my packages to undergo some testing').
+
+answer(personal_computing) :-
+  write('Personal computing').
+
+answer(highly_modular) :-
+  write('Highly modular').
 
 % Assigns an answer to questions from the knowledge base
 
@@ -494,3 +511,15 @@ bleeding_edge(Answer) :-
 bleeding_edge(Answer) :-
   \+ progress(bleeding_edge, _),
   ask(bleeding_edge, Answer, [yes, no]).
+
+packages(Answer) :-
+  progress(packages, Answer).
+packages(Answer) :-
+  \+ progress(packages, _),
+  ask(packages, Answer, [latest_packages, tested_packages]).
+
+minimalist_gui(Answer) :-
+  progress(minimalist_gui, Answer).
+minimalist_gui(Answer) :-
+  \+ progress(minimalist_gui, _),
+  ask(minimalist_gui, Answer, [personal_computing, highly_modular]).
