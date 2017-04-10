@@ -92,6 +92,12 @@ question(gnu_approved) :-
 question(gnu_approved_details) :-
   write('Tell me more about your preferences.'), nl.
 
+question(non_gnu_approved_details) :-
+  write('Pick one:'), nl.
+
+question(compile_packages) :-
+  write('Do you want to xompile packages from source?'), nl.
+
 % Answers
 answer(not_gonna_tell) :-
   write('Why do you want to know so much about me?').
@@ -242,6 +248,11 @@ answer(simple_and_lightweight) :-
 
 answer(from_scratch) :-
   write('I want to tey something build entirely from scratch').
+
+answer(stable) :-
+  write('Real stable OS').
+
+
 
 % Assigns an answer to questions from the knowledge base
 
@@ -430,3 +441,15 @@ gnu_approved_details(Answer) :-
 gnu_approved_details(Answer) :-
   \+ progress(gnu_approved_details, _),
   ask(gnu_approved_details, Answer, [free_fedora_based, free_ubuntu_based, simple_and_lightweight, from_scratch]).
+
+non_gnu_approved_details(Answer) :-
+  progress(non_gnu_approved_details, Answer).
+non_gnu_approved_details(Answer) :-
+  \+ progress(non_gnu_approved_details, _),
+  ask(non_gnu_approved_details, Answer, [newest_apps, stable, secure]).
+
+compile_packages(Answer) :-
+  progress(compile_packages, Answer).
+compile_packages(Answer) :-
+  \+ progress(compile_packages, _),
+  ask(compile_packages, Answer, [yes, no]).

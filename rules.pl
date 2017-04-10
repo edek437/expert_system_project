@@ -318,13 +318,35 @@ os(parabola) :-
   gnu_approved(yes),
   gnu_approved_details(simple_and_lightweight).
 
-os(to_be_implemented_next) :-
+os(open_bsd) :-
   experience(some_experience),
   linux_experience(intermediate),
   freedom(yes),
-  gnu_approved(no).
+  gnu_approved(no),
+  non_gnu_approved_details(secure).
+
+os(debian) :-
+  experience(some_experience),
+  linux_experience(intermediate),
+  freedom(yes),
+  gnu_approved(no),
+  non_gnu_approved_details(stable).
+
+os(fedora) :-
+  experience(some_experience),
+  linux_experience(intermediate),
+  freedom(yes),
+  gnu_approved(no),
+  non_gnu_approved_details(newest_apps).
+
+os(to_be_implemented_next) :-
+  experience(some_experience),
+  linux_experience(intermediate),
+  freedom(not_necessarily),
+  compile_packages(yes).
 
 os(to_be_implemented) :-
   experience(some_experience),
   linux_experience(intermediate),
-  freedom(not_necessarily).
+  freedom(not_necessarily),
+  compile_packages(no).
