@@ -86,6 +86,12 @@ question(audio_specific) :-
 question(freedom) :-
   write('Do you care about freedom?'), nl.
 
+question(gnu_approved) :-
+  write('GNU Project approved?'), nl.
+
+question(gnu_approved_details) :-
+  write('Tell me more about your preferences.'), nl.
+
 % Answers
 answer(not_gonna_tell) :-
   write('Why do you want to know so much about me?').
@@ -224,6 +230,18 @@ answer(games) :-
 
 answer(not_necessarily) :-
   write('Not necessarily').
+
+answer(free_fedora_based) :- %BLAB
+  write('I want Ubuntu based OS').
+
+answer(free_ubuntu_based) :-
+  write('I want Fedora based OS').
+
+answer(simple_and_lightweight) :-
+  write('I want simple and lighweight OS').
+
+answer(from_scratch) :-
+  write('I want to tey something build entirely from scratch').
 
 % Assigns an answer to questions from the knowledge base
 
@@ -400,3 +418,15 @@ freedom(Answer) :-
 freedom(Answer) :-
   \+ progress(freedom, _),
   ask(freedom, Answer, [yes, not_necessarily]).
+
+gnu_approved(Answer) :-
+  progress(gnu_approved, Answer).
+gnu_approved(Answer) :-
+  \+ progress(gnu_approved, _),
+  ask(gnu_approved, Answer, [yes, no]).
+
+gnu_approved_details(Answer) :-
+  progress(gnu_approved_details, Answer).
+gnu_approved_details(Answer) :-
+  \+ progress(gnu_approved_details, _),
+  ask(gnu_approved_details, Answer, [free_fedora_based, free_ubuntu_based, simple_and_lightweight, from_scratch]).

@@ -266,6 +266,33 @@ describe(av_linux) :-
          the phenomenal work of Open-Source and Commercial Audio developers.'), nl,
   write('Homepage: http://www.bandshed.net/avlinux/').
 
+describe(dragora) :-
+  write('Name: Dragora'), nl,
+  write('Description: It is written entirely from scratch and sharies some \c
+         similarities with Slackware. It contains 100% free software and uses a \c
+         Linux-libre kernel.'), nl,
+  write('Homepage: https://www.dragora.org/').
+
+describe(blag_linux_and_gnu) :-
+  write('Name: BLAG Linux And GNU'), nl,
+  write('Description: BLAG is a single-CD distro with applications desktop users \c
+         expect from a desktop including multimedia, graphics, desktop internet \c
+         applications and more. '), nl,
+  write('Homepage: http://www.blagblagblag.org/').
+
+describe(trisquel) :-
+  write('Name: Trisquel'), nl,
+  write('Description:  The project aims for a fully free software system without \c
+         proprietary software or firmware and uses a version of Ubuntu\'s modified \c
+         kernel, with the non-free code (binary blobs) removed.'), nl,
+  write('Homepage: https://trisquel.info/').
+
+describe(parabola) :-
+  write('Name: Parabola'), nl,
+  write('Description: The Parabola project is a community driven effort to provide \c
+         a fully Free (as in freedom) operating system that is simple and lightweight.'), nl,
+  write('Homepage: https://www.parabola.nu/').
+
 describe(to_be_implemented) :-
   write('This part of expert system is not implemented yet.'), nl.
 

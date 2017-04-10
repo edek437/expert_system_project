@@ -290,10 +290,39 @@ os(ubuntu_studio) :-
   oriented_details(multimedia_edition),
   audio_specific(no).
 
+os(dragora) :-
+  experience(some_experience),
+  linux_experience(intermediate),
+  freedom(yes),
+  gnu_approved(yes),
+  gnu_approved_details(from_scratch).
+
+os(trisquel) :-
+  experience(some_experience),
+  linux_experience(intermediate),
+  freedom(yes),
+  gnu_approved(yes),
+  gnu_approved_details(free_ubuntu_based).
+
+os(blag_linux_and_gnu) :-
+  experience(some_experience),
+  linux_experience(intermediate),
+  freedom(yes),
+  gnu_approved(yes),
+  gnu_approved_details(free_fedora_based).
+
+os(parabola) :-
+  experience(some_experience),
+  linux_experience(intermediate),
+  freedom(yes),
+  gnu_approved(yes),
+  gnu_approved_details(simple_and_lightweight).
+
 os(to_be_implemented_next) :-
   experience(some_experience),
   linux_experience(intermediate),
-  freedom(yes).
+  freedom(yes),
+  gnu_approved(no).
 
 os(to_be_implemented) :-
   experience(some_experience),
