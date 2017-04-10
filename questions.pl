@@ -104,6 +104,12 @@ question(like_package_managers) :-
 question(package_managers_details) :-
   write('Which one do you value the most?'), nl.
 
+question(minimalism) :-
+  write('Do you like minimalism?'), nl.
+
+question(bleeding_edge) :-
+  write('Do you need to be bleeding edge?'), nl.
+
 % Answers
 answer(not_gonna_tell) :-
   write('Why do you want to know so much about me?').
@@ -260,6 +266,9 @@ answer(stable) :-
 
 answer(optimized) :-
   write('OS optimized for Intel and AMD hardware').
+
+answer(dont_care) :-
+  write('I don\'t care').
 
 
 % Assigns an answer to questions from the knowledge base
@@ -473,3 +482,15 @@ package_managers_details(Answer) :-
 package_managers_details(Answer) :-
   \+ progress(package_managers_details, _),
   ask(package_managers_details, Answer, [stable, customization, optimized]).
+
+minimalism(Answer) :-
+  progress(minimalism, Answer).
+minimalism(Answer) :-
+  \+ progress(minimalism, _),
+  ask(minimalism, Answer, [yes, dont_care]).
+
+bleeding_edge(Answer) :-
+  progress(bleeding_edge, Answer).
+bleeding_edge(Answer) :-
+  \+ progress(bleeding_edge, _),
+  ask(bleeding_edge, Answer, [yes, no]).

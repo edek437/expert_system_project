@@ -374,4 +374,21 @@ os(to_be_implemented_next) :-
   experience(some_experience),
   linux_experience(intermediate),
   freedom(not_necessarily),
-  compile_packages(no).
+  compile_packages(no),
+  minimalism(yes),
+  bleeding_edge(yes).
+
+os(to_be_implemented_next) :-
+  experience(some_experience),
+  linux_experience(intermediate),
+  freedom(not_necessarily),
+  compile_packages(no),
+  minimalism(yes),
+  bleeding_edge(no).
+
+os(to_be_implemented) :-
+  experience(some_experience),
+  linux_experience(intermediate),
+  freedom(not_necessarily),
+  compile_packages(no),
+  minimalism(dont_care).
