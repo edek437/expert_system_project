@@ -128,6 +128,21 @@ question(fast_vs_stable) :-
 question(stability_details) :-
   write('Pick one:'), nl.
 
+question(release) :-
+  write('Rolling release or regulat release?'), nl.
+
+question(regular_details) :-
+  write('Pick one:'), nl.
+
+question(brave) :-
+  write('Are you brave?'), nl.
+
+question(brave_details) :-
+  write('Which one do you prefer?'), nl.
+
+question(coward_details) :-
+  write('Pick one:'), nl.
+
 % Answers
 answer(not_gonna_tell) :-
   write('Why do you want to know so much about me?').
@@ -326,6 +341,27 @@ answer(no_special) :-
 
 answer(command_line) :-
   write('Command line is my best friend').
+
+answer(regular) :-
+  write('Regular').
+
+answer(rolling) :-
+  write('Rolling').
+
+answer(fedora) :-
+  write('Fedora').
+
+answer(open_suse) :-
+  write('OpenSUSE').
+
+answer(kde_fan) :-
+  write('KDE oriented OS').
+
+answer(reliable) :-
+  write('Reliable OS').
+
+answer(old_hw_performance) :-
+  write('OS with high performance on old computers').
 
 % Assigns an answer to questions from the knowledge base
 
@@ -586,3 +622,33 @@ stability_details(Answer) :-
 stability_details(Answer) :-
   \+ progress(stability_details, _),
   ask(stability_details, Answer, [scientific_computing, server, no_special, command_line]).
+
+release(Answer) :-
+  progress(release, Answer).
+release(Answer) :-
+  \+ progress(release, _),
+  ask(release, Answer, [regular, rolling]).
+
+regular_details(Answer) :-
+  progress(regular_details, Answer).
+regular_details(Answer) :-
+  \+ progress(regular_details, _),
+  ask(regular_details, Answer, [newest_apps, poor_mac_fanboy]).
+
+brave(Answer) :-
+  progress(brave, Answer).
+brave(Answer) :-
+  \+ progress(brave, _),
+  ask(brave, Answer, [yes, no]).
+
+brave_details(Answer) :-
+  progress(brave_details, Answer).
+brave_details(Answer) :-
+  \+ progress(brave_details, _),
+  ask(brave_details, Answer, [fedora, open_suse]).
+
+coward_details(Answer) :-
+  progress(coward_details, Answer).
+coward_details(Answer) :-
+  \+ progress(coward_details, _),
+  ask(coward_details, Answer, [kde_fan, reliable, old_hw_performance]).

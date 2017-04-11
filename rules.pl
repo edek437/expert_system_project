@@ -475,11 +475,84 @@ os(scientific_linux) :-
   fast_vs_stable(stability),
   stability_details(scientific_computing).
 
-os(to_be_implemented) :-
+os(hackintosh) :-
   experience(some_experience),
   linux_experience(intermediate),
   freedom(not_necessarily),
   compile_packages(no),
   minimalism(dont_care),
   ease_of_setup(less),
-  fast_vs_stable(bleeding_edge).
+  fast_vs_stable(bleeding_edge),
+  release(regular),
+  regular_details(poor_mac_fanboy).
+
+os(fedora) :-
+  experience(some_experience),
+  linux_experience(intermediate),
+  freedom(not_necessarily),
+  compile_packages(no),
+  minimalism(dont_care),
+  ease_of_setup(less),
+  fast_vs_stable(bleeding_edge),
+  release(regular),
+  regular_details(newest_apps).
+
+os(fedora_rawhide) :-
+  experience(some_experience),
+  linux_experience(intermediate),
+  freedom(not_necessarily),
+  compile_packages(no),
+  minimalism(dont_care),
+  ease_of_setup(less),
+  fast_vs_stable(bleeding_edge),
+  release(rolling),
+  brave(yes),
+  brave_details(fedora).
+
+os(open_suse_tumbleweed) :-
+  experience(some_experience),
+  linux_experience(intermediate),
+  freedom(not_necessarily),
+  compile_packages(no),
+  minimalism(dont_care),
+  ease_of_setup(less),
+  fast_vs_stable(bleeding_edge),
+  release(rolling),
+  brave(yes),
+  brave_details(open_suse).
+
+os(chakra) :-
+  experience(some_experience),
+  linux_experience(intermediate),
+  freedom(not_necessarily),
+  compile_packages(no),
+  minimalism(dont_care),
+  ease_of_setup(less),
+  fast_vs_stable(bleeding_edge),
+  release(rolling),
+  brave(no),
+  coward_details(kde_fan).
+
+os(archbang) :-
+  experience(some_experience),
+  linux_experience(intermediate),
+  freedom(not_necessarily),
+  compile_packages(no),
+  minimalism(dont_care),
+  ease_of_setup(less),
+  fast_vs_stable(bleeding_edge),
+  release(rolling),
+  brave(no),
+  coward_details(old_hw_performance).
+
+os(sabayon) :-
+  experience(some_experience),
+  linux_experience(intermediate),
+  freedom(not_necessarily),
+  compile_packages(no),
+  minimalism(dont_care),
+  ease_of_setup(less),
+  fast_vs_stable(bleeding_edge),
+  release(rolling),
+  brave(no),
+  coward_details(reliable).
