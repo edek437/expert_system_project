@@ -395,6 +395,13 @@ describe(chakra) :-
          their favorite applications on top of a periodically updated system core.'), nl,
   write('Homepage: https://chakralinux.org/').
 
+describe(scientific_linux) :-
+  write('Name: Scientific Linux'), nl,
+  write('Description: Driven by Fermilab’s scientific mission and focusing on the \c
+         changing needs of experimental facilities, Scientific Linux should provide \c
+         a world class environment for scientific computing needs.'), nl,
+  write('Homepage: https://www.scientificlinux.org/').
+
 describe(to_be_implemented) :-
   write('This part of expert system is not implemented yet.'), nl.
 

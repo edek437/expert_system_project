@@ -125,6 +125,9 @@ question(easy_setup_details) :-
 question(fast_vs_stable) :-
   write('Bleeding edge or stability?'), nl.
 
+question(stability_details) :-
+  write('Pick one:'), nl.
+
 % Answers
 answer(not_gonna_tell) :-
   write('Why do you want to know so much about me?').
@@ -314,6 +317,15 @@ answer(bleeding_edge) :-
 
 answer(stability) :-
   write('Stability').
+
+answer(scientific_computing) :-
+  write('Scientific computing').
+
+answer(no_special) :-
+  write('I have no specific requirements').
+
+answer(command_line) :-
+  write('Command line is my best friend').
 
 % Assigns an answer to questions from the knowledge base
 
@@ -568,3 +580,9 @@ fast_vs_stable(Answer) :-
 fast_vs_stable(Answer) :-
   \+ progress(fast_vs_stable, _),
   ask(fast_vs_stable, Answer, [bleeding_edge, stability]).
+
+stability_details(Answer) :-
+  progress(stability_details, Answer).
+stability_details(Answer) :-
+  \+ progress(stability_details, _),
+  ask(stability_details, Answer, [scientific_computing, server, no_special, command_line]).

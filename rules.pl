@@ -435,14 +435,45 @@ os(open_suse) :-
   ease_of_setup(more),
   easy_setup_details(easy_administration).
 
-os(to_be_implemented_next) :-
+os(debian) :-
   experience(some_experience),
   linux_experience(intermediate),
   freedom(not_necessarily),
   compile_packages(no),
   minimalism(dont_care),
   ease_of_setup(less),
-  fast_vs_stable(stability).
+  fast_vs_stable(stability),
+  stability_details(no_special).
+
+os(frugalware) :-
+  experience(some_experience),
+  linux_experience(intermediate),
+  freedom(not_necessarily),
+  compile_packages(no),
+  minimalism(dont_care),
+  ease_of_setup(less),
+  fast_vs_stable(stability),
+  stability_details(command_line).
+
+os(cent_os) :-
+  experience(some_experience),
+  linux_experience(intermediate),
+  freedom(not_necessarily),
+  compile_packages(no),
+  minimalism(dont_care),
+  ease_of_setup(less),
+  fast_vs_stable(stability),
+  stability_details(server).
+
+os(scientific_linux) :-
+  experience(some_experience),
+  linux_experience(intermediate),
+  freedom(not_necessarily),
+  compile_packages(no),
+  minimalism(dont_care),
+  ease_of_setup(less),
+  fast_vs_stable(stability),
+  stability_details(scientific_computing).
 
 os(to_be_implemented) :-
   experience(some_experience),
